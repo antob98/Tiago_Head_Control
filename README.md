@@ -1,22 +1,19 @@
-# Gazebo & RViz simulation
-This third assignment consists in a robot simulation based on ROS environment and in c++ language. Gazibo and Rviz environment has been downloaded from [Prof. Carmine Recchiuto's repository](https://github.com/CarmineD8/final_assignment) for Robotics Engineering students of UNIGE.
-
-Some parameters has been already set in [slam_gmapping package](https://github.com/CarmineD8/slam_gmapping) needed for this simulation.
+# SofAR assignment
+The assignment consists in detecting tables as active obstacles for navigation using both the RGB-D sensor and the Lidar scan with the final aim of correctly mapping raised obstacles in the 2D occupancy grid.
+The robot used in simulation here is Tiago.
 
 ## Installing and running
-At first, install the above package in your ROS workspace by executing in terminal:
+To run our code, first you need to install the following packages (make sure to check melodic version):  
+[Tiago ROS tutorial](http://wiki.ros.org/Robots/TIAGo/Tutorials/Installation/InstallUbuntuAndROS),  
+[Gazebo models](https://github.com/osrf/gazebo_models),  
+[Laserscan merger](https://github.com/robotics-upo/laserscan_merger)
+
+At first, install the current repository in your ROS workspace by executing in terminal:
 ```
-git clone https://github.com/CarmineD8/slam_gmapping
+cd tiago_public_ws/src
+git clone https://github.com/antob98/Tiago_Head_Control.git
 ```
-Since ROS noetic is used, make sure to also have the 'ros navigation stack' installed by executing:
-```
-apt-get install ros-noetic-navigation
-```
-Switch on the noetic branch of the packeges by executing:
-```
-git checkout noetic
-```
-At last, download this package and build the workspace by executing `catkin_make` command.
+At last, download this package and build the workspace by executing `catkin build` command.
 
 Now, to run this version of the simulation digit respectively in three different terminals:
 ```
@@ -25,17 +22,6 @@ roslaunch final_assignment move_base.launch
 roslaunch final_assignment interface.launch
 ```
 Gazebo and RViz environment is now available.
-
-## Assignment
-For this assignment a software architecture for the control of the robot is developed. This architecture is defined as an user interface that takes user requests and then execute the corresponding controlling mode. There are three different robot control modalities:
-* autonomously reach a position in the environment passed as input by the user
-* the user takes full control of the robot and drives it with the keyboard
-* the user takes control of the robot, but it is assisted to avoid collisions
-
-This interface is developed as three nodes that subscribes and publish to different topics and it implements different functions for every modality. The 'interface_node' manages directly the user interface, 'callbacks_node' calls every time the callback functions of the subscribers and 'driver_node' control the robot both with respect to the minimum distances from the obstacles and to user inputs in user-controlling modalitites. This nodes communicate with custom service.
-
-Here you can find the corresponding documentation for the controlling nodes and the custom service:
-https://aurorad-hub.github.io/RT1-III_assignment/
 
 ## Simulation topics used
 ### Reach new goal ###
