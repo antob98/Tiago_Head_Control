@@ -15,7 +15,8 @@ git clone https://github.com/antob98/Tiago_Head_Control.git
 ```
 (........)
 
-At last, build the workspace by executing `catkin build` command.
+At last, build the workspace by executing `catkin build` command and type in the terminal 'source .devel/setup.bash'.
+
 
 ## Contents and running
 ### Simulation and behaviours
@@ -24,7 +25,7 @@ To run the default simulation of the tutorial open a terminal:
 roslaunch tiago_2dnav_gazebo tiago_mapping.launch public_sim:=true
 ```
 With this implementation, we have observed that Tiago collides with obstacles as tables whenever a goal is set under them.
-To explore other Tiago behaviours, we run the simulation in other worlds created by us typing in theterminal:
+To explore other Tiago behaviours, we run the simulation in other worlds created by us typing in the terminal:
 ```
 roslaunch tiago_2dnav_gazebo tiago_mapping.launch public_sim:=true world:=tables
 ```
@@ -50,7 +51,24 @@ In the second one, input:
 roslaunch my_head_control test.launch
 ```
 WAIT until the message "done operation: 0.0" is printed on the terminal, or at least until the robot's head inclination is set.
+Finally, simply input your goals. You should be able to explore the whole map without ever colliding with tables, even if your goal is set under them. If it cannot reach the goal, ot simply stops.
 
+By running this solution with our custum worlds, we also observed that Tiago has difficulties with wide obstacles because the RGB-D camera data aren't saved in the occupancy grid of gmapping. So, for this type of obstacles, Tiago only sees part of it and may remain stuck in trying to go around it.
+To solve this problem, we implemented the following solution: table mapping.
+
+#### Table mapping
+In this implementation, we merged data from Lidar sensor and RGB-D camera with [Laserscan merger](https://github.com/robotics-upo/laserscan_merger) in order to have only one laser topic used from gmapping to build the occupancy grid and the map.
+Note that the RGB-D camera data have to be converted in laserscan and this is done by the package 'pointcluod_to_laserscan'.
+Here, there is also the possibility to save the map thanks to a custom interface in order to use the same map with other robots, such that the obstacle position is known a priori.
+
+To use this code, open a terminal and input:
+cd tiago_public_ws/
+Then, open a new window from the same terminal. In the first one, input:
+```
+roslaunch tiago_2dnav_gazebo tiago_mapping_2.launch public_sim:=true
+```
+
+## Conclusions
 
 
 ## Simulation topics used
