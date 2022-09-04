@@ -32,6 +32,12 @@ or
 ```
 roslaunch tiago_2dnav_gazebo tiago_mapping.launch public_sim:=true worlds:=test1
 ```
+We observed that Tiago has some difficulties with lower and rectangular tables because of the longer sides make it complex to fully detect the obstacle with the RGB-D camera.
+To solve these problems, we implemented the following solution: head control.
+
+#### Head control
+In this implementation, we lowered the camera angulation and make Tiago able to turn its head in the same direction where it is turning.
+In this way, we were able to correctly detect the tables.
 
 To use this code, open a terminal and input:
 cd tiago_public_ws/
