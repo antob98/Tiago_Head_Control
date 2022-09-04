@@ -15,7 +15,7 @@ git clone https://github.com/antob98/Tiago_Head_Control.git
 ```
 (........)
 
-At last, build the workspace by executing `catkin build` command and type in the terminal 'source .devel/setup.bash'.
+At last, build the workspace by executing `catkin build` command and type in the terminal `source .devel/setup.bash`.
 
 
 ## Contents and running
