@@ -2,7 +2,7 @@
 The assignment consists in detecting tables as active obstacles for navigation using both the RGB-D sensor and the Lidar scan with the final aim of correctly mapping raised obstacles in the 2D occupancy grid.
 The robot used in simulation here is Tiago.
 
-## Installing and running
+## Installing
 To run our code, first you need to install the following packages (make sure to check melodic version):  
 [Tiago ROS tutorial](http://wiki.ros.org/Robots/TIAGo/Tutorials/Installation/InstallUbuntuAndROS),  
 [Gazebo models](https://github.com/osrf/gazebo_models),  
@@ -13,15 +13,39 @@ At first, install the current repository in your ROS workspace by executing in t
 cd tiago_public_ws/src
 git clone https://github.com/antob98/Tiago_Head_Control.git
 ```
-At last, download this package and build the workspace by executing `catkin build` command.
+(........)
 
-Now, to run this version of the simulation digit respectively in three different terminals:
+At last, build the workspace by executing `catkin build` command.
+
+## Contents and running
+### Simulation and behaviours
+To run the default simulation of the tutorial open a terminal:
 ```
-roslaunch final_assignment simulation_gmapping.launch
-roslaunch final_assignment move_base.launch
-roslaunch final_assignment interface.launch
+roslaunch tiago_2dnav_gazebo tiago_mapping.launch public_sim:=true
 ```
-Gazebo and RViz environment is now available.
+With this implementation, we have observed that Tiago collides with obstacles as tables whenever a goal is set under them.
+To explore other Tiago behaviours, we run the simulation in other worlds created by us typing in theterminal:
+```
+roslaunch tiago_2dnav_gazebo tiago_mapping.launch public_sim:=true world:=tables
+```
+or
+```
+roslaunch tiago_2dnav_gazebo tiago_mapping.launch public_sim:=true worlds:=test1
+```
+
+To use this code, open a terminal and input:
+cd tiago_public_ws/
+Then, open a new window from the same terminal. In the first one, input:
+```
+roslaunch tiago_2dnav_gazebo tiago_mapping.launch public_sim:=true
+```
+In the second one, input:
+```
+roslaunch my_head_control test.launch
+```
+WAIT until the message "done operation: 0.0" is printed on the terminal, or at least until the robot's head inclination is set.
+
+
 
 ## Simulation topics used
 ### Reach new goal ###
