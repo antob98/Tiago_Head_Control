@@ -14,7 +14,7 @@ git clone https://github.com/antob98/Tiago_Head_Control.git
 ```
 
 After downloading this repo, move the package `my_head_control` in the `src` folder of `tiago_public_ws`.  
-Then, move the `.world` files in this `worlds` folder inside `tiago_public_ws/src/tiago_simulation/tiago_gazebo/worlds` while in `tiago_public_ws/src/tiago_simulation/tiago_gazebo/models` move all the elements cloned by [Gazebo models](https://github.com/osrf/gazebo_models).  
+Then, move the `.world` files stored in the `worlds` folder of this repository inside `tiago_public_ws/src/tiago_simulation/tiago_gazebo/worlds` while in `tiago_public_ws/src/tiago_simulation/tiago_gazebo/models` move all the elements cloned by [Gazebo models](https://github.com/osrf/gazebo_models).  
 At last, in `tiago_simulation/tiago_2dnav_gazebo` create a folder `src` and move here the file `interface.cpp` while in the `launch` folder move the file `tiago_mapping_2.launch` of this repo.
 
 Finally, build the workspace by executing the commands: `cd tiago_public_ws`, then `catkin build`, then `source .devel/setup.bash` in the terminal.  
