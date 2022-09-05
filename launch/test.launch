@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-  <rosparam file="$(find my_head_control)/param/hc_params.yaml" command="load"/>
-  <node pkg="my_head_control" type="test.py" respawn="false" name="my_head_control" output="screen"/>
-</launch>
