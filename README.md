@@ -13,9 +13,12 @@ At first, install the current repository in your ROS workspace by executing in t
 cd tiago_public_ws/src
 git clone https://github.com/antob98/Tiago_Head_Control.git
 ```
-(........)
 
-At last, build the workspace by executing `catkin build` command and type in the terminal `source .devel/setup.bash`.
+After downloading this repo, move the package `my_head_control` in the src folder of the workspace.
+Then, move the `.world` file in this worlds folder inside `tiago_public_ws/src/tiago_simulation/tiago_gazebo/worlds`.
+At last, in `tiago_simulation/tiago_2dnav_gazebo` create a folder `src` and move here the file `interface.cpp` while in the `launch` folder move the file `tiago_mapping_2.launch`.
+
+Finally, build the workspace by executing `catkin build` command and type in the terminal `source .devel/setup.bash`.
 
 
 ## Contents and running
@@ -66,13 +69,16 @@ Here, there is also the possibility to save the map thanks to a custom interface
 To use this code, open a terminal and input:
 `cd tiago_public_ws/`
 
-Then, open a new window from the same terminal. In the first one, input:
+Then, input:
 ```
 roslaunch tiago_2dnav_gazebo tiago_mapping_2.launch public_sim:=true
 ```
 
 ## Conclusions
+With our work we managed to solve the issue regarding obstacle avoidance with tables within the default tutorial map.
+Regarding the custom maps we created, we observed that also other type of obstacles can be avoided correctly by Tiago.
 
+Moreover, we also managed to correctly save the maps with our interface.
 
 ## Simulation topics used
 ### Reach new goal ###
