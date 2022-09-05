@@ -82,7 +82,12 @@ tiago_public_ws/src/tiago_simulation/tiago_2dnav_gazebo
 
 *  interface.cpp . Create a src directory in the path above and put inside it the interface.cpp file
 
-*
+* laserscan_merger.launch. Puut it in this path
+```
+tiago_public_ws/src/laserscan_merger/launch
+```
+
+* mapping.launch 
 , open a terminal and input:
 `cd tiago_public_ws/`
 
