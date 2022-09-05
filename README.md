@@ -74,11 +74,6 @@ To use this code, you need to take from the rgbd_mapping directory the following
 tiago_public_ws/src/tiago_simulation/tiago_2dnav_gazebo/launch
 ```
 
-* package.xml and CMakeLists.txt. Put them in this path (substitute the previous files already present)
-```
-tiago_public_ws/src/tiago_simulation/tiago_2dnav_gazebo
-```
-
 * interface. Take the interface directory from the Tiago_Head_Control and put it in tiago_public_ws/src
 
 * laserscan_merger.launch. Put it in this path (substitute the previous file already present)
