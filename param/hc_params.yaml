@@ -1,5 +1,0 @@
-#Ros Parameters to be used to control the head's motion status. 
-#p means "permission", while dir means "direction"; 
-#setting p to 1 will grant permission to act on the head, seting it to 0 will negate permission; 
-#d can be either set to 0, 1 or 2 depending if the camera is tilted to the left, to the front or to the right.
-my_head_state: {p: 1, dir: 1}
