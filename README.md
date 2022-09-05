@@ -77,10 +77,12 @@ tiago_public_ws/src/tiago_simulation/tiago_2dnav_gazebo/launch
 
 * package.xml and CMakeLists.txt. Put them in this path (substitute the previous files already present)
 ```
-tiago_public_ws/src/tiago_simulation/tiago_2dnav_gazebo/
+tiago_public_ws/src/tiago_simulation/tiago_2dnav_gazebo
 ```
 
-* 
+*  interface.cpp . Create a src directory in the path above and put inside it the interface.cpp file
+
+*
 , open a terminal and input:
 `cd tiago_public_ws/`
 
