@@ -68,7 +68,15 @@ Note that the RGB-D camera data have to be converted in laserscan and this is do
 
 Here, there is also the possibility to save the map thanks to a custom interface in order to use the same map with other robots, such that the obstacle position is known a priori.
 
-To use this code, open a terminal and input:
+To use this code, you need to take from the rgbd_mapping directory the following files:
+
+* tiago_mapping_2.launch. Put it in this path 
+```
+tiago_public_ws/src/tiago_simulation/tiago_2dnav_gazebo/launch
+```
+
+* package.xml and CMakeLists.txt
+, open a terminal and input:
 `cd tiago_public_ws/`
 
 Then, input:
