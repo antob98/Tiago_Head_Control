@@ -73,7 +73,7 @@
     </include>
   </group>
 
-  <node name="interface_node" pkg="tiago_2dnav_gazebo"
+  <node name="interface_node" pkg="interface"
 	      type="interface_node" output="screen"
 	      required="false" launch-prefix="gnome-terminal -- sh -c" />
 
