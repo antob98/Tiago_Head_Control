@@ -12,7 +12,6 @@ At first, install the current repository on your Desktop, for example, by execut
 ```
 git clone https://github.com/antob98/Tiago_Head_Control.git
 ```
-Then, from the terminal, go into tiago_public_ws using the cd command.
 
 After downloading this repo, move the package `my_head_control` in the `src` folder of tiago_public_ws.  
 Then, move the `.world` files in this `worlds` folder inside `tiago_public_ws/src/tiago_simulation/tiago_gazebo/worlds` while in `tiago_public_ws/src/tiago_simulation/tiago_gazebo/models` move all the elements cloned by [Gazebo models](https://github.com/osrf/gazebo_models).  
