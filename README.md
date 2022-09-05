@@ -113,4 +113,4 @@ Regarding the custom maps we created, we observed that also other type of obstac
 
 Moreover, we also managed to correctly save the maps with our interface, also with the presence of the tables in the occupancy grid.
 
-As future implementation, it can be stabilized the mapping process (when the rgbd data are merged with the lidar sensor data) in order to obtain a more accurate map, usable also for other type of robots. 
+As future implementation, the mapping process could be stabilized (when the rgbd data are merged with the lidar sensor data) in order to obtain a more accurate map, usable also for other type of robots. 
