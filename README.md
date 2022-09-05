@@ -21,7 +21,7 @@ At last, in `tiago_simulation/tiago_2dnav_gazebo` create a folder `src` and move
 Finally, build the workspace by executing `catkin build` command and type in the terminal `source .devel/setup.bash`.  
 A detailed UML of the packages and files of interest is here presented:
 
-![uml_diagram](https://user-images.githubusercontent.com/93495918/188419446-4d559904-4f6b-4f9f-96c2-c667e0589e05.png)
+![Uml_Diagram](https://user-images.githubusercontent.com/93495918/188476017-ffcb6288-fb9c-427a-a2b2-27c30ad71ca1.png)
 
 ## Contents and running
 ### Simulation and behaviours
