@@ -82,16 +82,25 @@ tiago_public_ws/src/tiago_simulation/tiago_2dnav_gazebo
 
 *  interface.cpp . Create a src directory in the path above and put inside it the interface.cpp file
 
-* laserscan_merger.launch. Puut it in this path
+* laserscan_merger.launch. Put it in this path (substitute the previous files already present)
 ```
 tiago_public_ws/src/laserscan_merger/launch
 ```
 
-* mapping.launch 
-, open a terminal and input:
+* mapping.launch Put it in this path (substitute the previous files already present)
+```
+tiago_public_ws/src/tiago_navigation/tiago_2dnav/launch
+```
+
+Lastly open a terminal and input:
 `cd tiago_public_ws/`
 
 Then, input:
+
+```
+catkin build
+```
+source ./devel/setup.bash
 ```
 roslaunch tiago_2dnav_gazebo tiago_mapping_2.launch public_sim:=true
 ```
