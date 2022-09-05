@@ -107,8 +107,10 @@ source ./devel/setup.bash
 roslaunch tiago_2dnav_gazebo tiago_mapping_2.launch public_sim:=true
 ```
 
-## Conclusions
+## Conclusions and future implementation
 With our work we managed to solve the issue regarding obstacle avoidance with tables within the default tutorial map.
 Regarding the custom maps we created, we observed that also other type of obstacles can be avoided correctly by Tiago.
 
-Moreover, we also managed to correctly save the maps with our interface.
+Moreover, we also managed to correctly save the maps with our interface, also with the presence of table in the occupancy grid.
+
+As future implementation, it can be stabilaized the mapping process (when the rgbd data are merged with the lidar sensor data) in order to obtain a more accurate map, usable also for other type of robots. 
