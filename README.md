@@ -100,7 +100,9 @@ Then, input:
 ```
 catkin build
 ```
+```
 source ./devel/setup.bash
+```
 ```
 roslaunch tiago_2dnav_gazebo tiago_mapping_2.launch public_sim:=true
 ```
