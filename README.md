@@ -75,7 +75,12 @@ To use this code, you need to take from the rgbd_mapping directory the following
 tiago_public_ws/src/tiago_simulation/tiago_2dnav_gazebo/launch
 ```
 
-* package.xml and CMakeLists.txt
+* package.xml and CMakeLists.txt. Put them in this path (substitute the previous files already present)
+```
+tiago_public_ws/src/tiago_simulation/tiago_2dnav_gazebo/
+```
+
+* 
 , open a terminal and input:
 `cd tiago_public_ws/`
 
