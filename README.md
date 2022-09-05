@@ -14,8 +14,8 @@ cd tiago_public_ws/src
 git clone https://github.com/antob98/Tiago_Head_Control.git
 ```
 
-After downloading this repo, move the package `my_head_control` in the src folder of the workspace.  
-Then, move the `.world` file in this `worlds` folder inside `tiago_public_ws/src/tiago_simulation/tiago_gazebo/worlds` while in `tiago_public_ws/src/tiago_simulation/tiago_gazebo/models` move all the elements cloned by [Gazebo models](https://github.com/osrf/gazebo_models).  
+After downloading this repo, move the package `my_head_control` in the `src` folder of the workspace.  
+Then, move the `.world` files in this `worlds` folder inside `tiago_public_ws/src/tiago_simulation/tiago_gazebo/worlds` while in `tiago_public_ws/src/tiago_simulation/tiago_gazebo/models` move all the elements cloned by [Gazebo models](https://github.com/osrf/gazebo_models).  
 At last, in `tiago_simulation/tiago_2dnav_gazebo` create a folder `src` and move here the file `interface.cpp` while in the `launch` folder move the file `tiago_mapping_2.launch` of this repo.
 
 Finally, build the workspace by executing `catkin build` command and type in the terminal `source .devel/setup.bash`.  
@@ -54,7 +54,7 @@ In the second one, input:
 ```
 roslaunch my_head_control test.launch
 ```
-WAIT until the message "done operation: 0.0" is printed on the terminal, or at least until the robot's head inclination is set.
+Wait until the message "done operation: 0.0" is printed on the terminal, or at least until the robot's head inclination is set.
 Finally, simply input your goals. You should be able to explore the whole map without ever colliding with tables, even if your goal is set under them. If it cannot reach the goal, it simply stops.
 
 By running this solution with our custum worlds, we also observed that Tiago has difficulties with wide obstacles because the RGB-D camera data aren't saved in the occupancy grid of gmapping. So, for this type of obstacles, Tiago only sees part of it and may remain stuck in trying to go around it.
