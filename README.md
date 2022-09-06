@@ -24,7 +24,7 @@ source .devel/setup.bash
 ```  
 A detailed UML of the packages and files of interest is here presented:
 
-![Uml_Diagram](https://user-images.githubusercontent.com/93495918/188476017-ffcb6288-fb9c-427a-a2b2-27c30ad71ca1.png)
+![Uml_Diagram](https://user-images.githubusercontent.com/93495918/188591689-221a7e98-ae54-4802-9306-34957454c4ad.png)
 
 ## Contents and running
 ### Simulation and behaviours
